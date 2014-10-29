@@ -3,6 +3,9 @@
   "description": "blackmagicwoman app",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "node app"
+  },
   "dependencies": {
     "configs-overload": "^0.2.0",
     "express": "4.9.0"
