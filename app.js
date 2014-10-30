@@ -9,7 +9,7 @@ app.set('env', config.mode);
 
 app.get('/', function (req, res) {
   res.send('blackmagicwoman');
-})
+});
 
 var server = app.listen(port, function () {
 
