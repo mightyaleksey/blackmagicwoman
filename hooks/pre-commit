@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# getting javascript files in the staging area
+js=`git diff --cached --name-status | awk '$1 != "R" { print $2 }' | grep \.js$`
+
+# no files, exit
+if [ ! $js ]; then
+    exit 0
+fi
+
+# running jscs
+echo '[jscs]'
+if ! jscs $js; then
+    # has errors, exit
+    exit 1
+fi
+
+exit 0

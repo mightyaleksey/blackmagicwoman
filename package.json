@@ -4,6 +4,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "postinstall": "ln -fs $(pwd)/hooks/pre-commit $(pwd)/.git/hooks/pre-commit",
     "start": "node app",
     "test": "mocha --bail --colors --reporter spec --ui bdd test"
   },
